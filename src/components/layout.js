@@ -18,8 +18,12 @@ import "./layout.css"
 import AppBusiness from "../container/App&BusinessSection"
 import Business from "../container/ForBusiness"
 import Footer from "../container/Footer"
+import Menu from "../container/MobileMenu"
+import { useState } from "react"
 
 const Layout = ({ children }) => {
+  const [toggle,setToggle] = useState(true)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,11 +33,14 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  console.log(toggle)
 
   return (
     <>
 
-    <Navbar/>
+    {
+      toggle ? <>
+    <Navbar setToggle={setToggle} />
     <Home/>
     <Services/>
     <Area/>
@@ -42,6 +49,12 @@ const Layout = ({ children }) => {
     <AppBusiness/>
     <Business/>
     <Footer/>
+    </>
+    :
+    <Menu toggle={toggle} setToggle={setToggle}/>
+    // <div>this is false</div>
+    }
+    
     {/* <div> {children} </div> */}
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
@@ -68,3 +81,10 @@ const Layout = ({ children }) => {
 }
 
 export default Layout
+
+
+
+// mobile drawer doing
+// 5 round star done
+// complete mobile responsive
+// background images

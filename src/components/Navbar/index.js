@@ -1,14 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import Container from "../Container"
 
-export default function Navbar() {
+export default function Navbar(props) {
     const data = useStaticQuery(graphql`
    {  allContentfulWefresh{
         edges{
           node{
-                    id
+            id
             navbar
             logo {
               id
@@ -36,7 +36,10 @@ export default function Navbar() {
                     </div>
 
                     <div className="sm:hidden flex md:hidden lg:hidden" >
-                        <GatsbyImage image={menuIcon} className="w-10 h-8 mt-1 "  />
+                        <button onClick={()=>{props.setToggle(false); console.log("clicked")}} >
+                        <GatsbyImage  image={menuIcon}  className="w-10 h-8 mt-1"  />
+
+                        </button>
 
                     </div>
                     <div className="sm:flex hidden md:flex lg:flex">
