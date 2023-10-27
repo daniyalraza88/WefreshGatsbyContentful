@@ -91,7 +91,9 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 function IndexPage(){
       // {console.log(data.allContentfulWefresh.edges[1].node.navbar)}
       // const navArray = data.allContentfulWefresh.edges[1].node.navbar
-  return <Layout> </Layout>
+  return <Layout> 
+  
+     </Layout>
 }
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../components/Container";
+import Container from "../../components/Container-wrapper";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -28,9 +28,9 @@ export default function AppBusiness(){
     return <section className="bg-blue-100 pt-16 pb-16 mt-10 px-10" >
             <div className="text-center text-lg " >
 
-<h1 className="text-blue-200 text-4xl" > {heading}  </h1>
+<h1 className="text-[#68BAE3] text-4xl" > {heading}  </h1>
 <br></br>
-<h6 className="sm:w-1/2 w-2/2 m-auto" > {text} </h6>
+<h6 className="sm:w-1/2 w-2/2 m-auto text-[#868E95] " > {text} </h6>
 </div>
 <div className="flex flex-col sm:flex-row gap-3 sm:justify-center text-center pt-10" >
     <div> <GatsbyImage image={image} /> </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import Container from "../Container"
+import Container from "../Container-wrapper"
 
 export default function Navbar(props) {
     const data = useStaticQuery(graphql`
@@ -32,7 +32,7 @@ export default function Navbar(props) {
             <div>
                 <div className=" text-lg mt-5 flex justify-between ">
                     <div  >
-                        <GatsbyImage image={logo} className="mr-10" />
+                        <GatsbyImage image={logo} className="mr-10 z-10" />
                     </div>
 
                     <div className="sm:hidden flex md:hidden lg:hidden" >

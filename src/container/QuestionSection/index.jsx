@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Container from "../../components/Container";
+import Container from "../../components/Container-wrapper";
 import { graphql, useStaticQuery } from "gatsby";
 
 export default function Questions() {
@@ -42,40 +42,76 @@ export default function Questions() {
     const [toggle3,setToggle3] = useState(false)
 
     return <Container>
-        <section className="bg-yellow-100 pt-10 pb-10 ">
+        <section className=" pt-10 pb-10 text-lg">
             <div className="text-center">
 
             <h1 className="text-blue-200 text-3xl pl-5 " > {heading1} </h1>
             <h6> {answer1} </h6>
             </div>
             <br></br>
-        <h4 className="border-2 hover:cursor-pointer mb-1 pl-5" onClick={()=>{setToggle1(!toggle1)}}> {questions} </h4>
-      {
-          toggle1 ? 
-        <p className="pb-3 p-5"> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
-        :
+
+
+            {/* <div className="sm:w-3/4 w-full m-auto"> 
+        <h4 className="border-2 rounded-lg py-2 px-10 hover:cursor-pointer mb-2 " onClick={()=>{setToggle1(!toggle1)}}> {questions} </h4>
+      
+          
+        <p className={ `pb-3 p-5 border-2 rounded-lg py-2 px-10 mb-2 text-[#868E95]  transition-max-h-0 ${toggle1 ? "max-h-full" : "max-h-0" } `}> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
+        
         <div></div>
-    }
+    
 
 
-        <h4 className="border-2 hover:cursor-pointer mb-1 pl-5" onClick={()=>{setToggle2(!toggle2)}}> {questions} </h4>
+        <h4 className="border-2 rounded-lg py-2 px-10 hover:cursor-pointer mb-2" onClick={()=>{setToggle2(!toggle2)}}> {questions} </h4>
       {
           toggle2 ? 
-          <p className="pb-3 p-5"> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
+          <p className="pb-3 p-5 border-2 rounded-lg py-2 px-10 mb-2 text-[#868E95]"> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
 
         :
         <div></div>
     }
 
 
-        <h4 className="border-2 hover:cursor-pointer pl-5" onClick={()=>{setToggle3(!toggle3)}}> {questions} </h4>
+        <h4 className="border-2 rounded-lg py-2 px-10 hover:cursor-pointer mb-2" onClick={()=>{setToggle3(!toggle3)}}> {questions} </h4>
       {
           toggle3 ? 
-          <p className="pb-3 p-5 "> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
+          <p className="pb-3 p-5 border-2 rounded-lg py-2 px-10 text-[#868E95]"> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
 
         :
         <div></div>
     }
+    </div> */}
+
+
+
+            <div className="sm:w-3/4 w-full m-auto " > 
+        <h4 className="border-2 rounded-lg py-2 px-10 hover:cursor-pointer mb-2 " onClick={()=>{setToggle1(!toggle1)}}> {questions} </h4>
+      {
+          toggle1 ? 
+        <p className="pb-3 p-5 border-2 rounded-lg py-2 px-10 mb-2 text-[#868E95]  "> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
+        :
+        <div></div>
+    }
+
+
+        <h4 className="border-2 rounded-lg py-2 px-10 hover:cursor-pointer mb-2" onClick={()=>{setToggle2(!toggle2)}}> {questions} </h4>
+      {
+          toggle2 ? 
+          <p className="pb-3 p-5 border-2 rounded-lg py-2 px-10 mb-2 text-[#868E95]"> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
+
+        :
+        <div></div>
+    }
+
+
+        <h4 className="border-2 rounded-lg py-2 px-10 hover:cursor-pointer mb-2" onClick={()=>{setToggle3(!toggle3)}}> {questions} </h4>
+      {
+          toggle3 ? 
+          <p className="pb-3 p-5 border-2 rounded-lg py-2 px-10 text-[#868E95]"> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
+
+        :
+        <div></div>
+    }
+    </div>
 
         </section>
 
@@ -96,13 +132,13 @@ export default function Questions() {
 <div className="flex flex-col sm:flex-row justify-evenly sm:w-2/3 w-3/3 m-auto gap-2 " >
     <div className="border-2 sm:w-1/2 w-2/2 text-center pt-16">
         <h3> {number} </h3>
-        <p>{answerHeading}</p>
+        <p className="text-[#868E95]" >{answerHeading}</p>
 
     </div>
     
     <div className="border-2 sm:w-1/2 w-2/2 text-center pt-16">
     <h3> {email} </h3>
-        <p>{answerHeading}</p>
+        <p className="text-[#868E95]">{answerHeading}</p>
     </div>
 
 </div>

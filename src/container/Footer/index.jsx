@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../components/Container";
+import Container from "../../components/Container-wrapper";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -36,7 +36,7 @@ let googleLogo = getImage(data.contentfulFooter.logos[1])
             <div className="-mt-2" ><GatsbyImage image={mainLogo}  /></div>
             <div>
                 <h3>{headings}</h3>
-                <ul className="mt-3">
+                <ul className="mt-3 text-[#868E95] ">
                     {list.map((val=>{
                         return <li> {val} </li>
                     }))}
@@ -44,7 +44,7 @@ let googleLogo = getImage(data.contentfulFooter.logos[1])
             </div>
             <div>
             <h3>{headings}</h3>
-                <ul className="mt-3" >
+                <ul className="mt-3 text-[#868E95] " >
                 {list.map((val=>{
                         return <li> {val} </li>
                     }))}
@@ -52,13 +52,13 @@ let googleLogo = getImage(data.contentfulFooter.logos[1])
             </div>
             <div>
             <h3>{headings}</h3>
-                <ul className="mt-3" >
+                <ul className="mt-3 text-[#868E95] " >
                 {list.map((val=>{
                         return <li> {val} </li>
                     }))}
                 </ul>
             </div>
-            <div className="text-center" >{extraText} 
+            <div className="text-center text-[#868E95] " >{extraText} 
                 <div className="flex gap-5 justify-center pt-5 " > 
                 <div> <GatsbyImage image={appleLogo} /> </div>
                 <div> <GatsbyImage image={googleLogo} /> </div>
