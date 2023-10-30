@@ -30,7 +30,7 @@ export default function Navbar(props) {
 <header>
         <Container>
             <div>
-                <div className=" text-lg mt-5 flex justify-between ">
+                <div className=" text-lg mt-1 flex justify-between ">
                     <div  >
                         <GatsbyImage image={logo} className="mr-10 z-10" />
                     </div>

@@ -44,7 +44,6 @@ export default function Questions() {
     return <Container>
         <section className=" pt-10 pb-10 text-lg">
             <div className="text-center">
-
             <h1 className="text-blue-200 text-3xl pl-5 " > {heading1} </h1>
             <h6> {answer1} </h6>
             </div>
@@ -84,29 +83,36 @@ export default function Questions() {
 
 
             <div className="sm:w-3/4 w-full m-auto " > 
-        <h4 className="border-2 rounded-lg py-2 px-10 hover:cursor-pointer mb-2 " onClick={()=>{setToggle1(!toggle1)}}> {questions} </h4>
+        <h4 className="sm:border-2 rounded-lg py-2 sm:px-10 px-5 hover:cursor-pointer mb-2 " onClick={()=>{setToggle1(!toggle1)}}> {questions} </h4>
+        <hr></hr>
       {
           toggle1 ? 
-        <p className="pb-3 p-5 border-2 rounded-lg py-2 px-10 mb-2 text-[#868E95]  "> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
+       <>  <p className="pb-3 p-5 sm:border-2 rounded-lg py-2 sm:px-10 mb-2 text-[#868E95]  "> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p> <hr></hr> </>
         :
         <div></div>
     }
 
 
-        <h4 className="border-2 rounded-lg py-2 px-10 hover:cursor-pointer mb-2" onClick={()=>{setToggle2(!toggle2)}}> {questions} </h4>
+        <h4 className="sm:border-2 rounded-lg py-2 sm:px-10 px-5 hover:cursor-pointer mb-2" onClick={()=>{setToggle2(!toggle2)}}> {questions} </h4>
+        <hr></hr>
+      
       {
           toggle2 ? 
-          <p className="pb-3 p-5 border-2 rounded-lg py-2 px-10 mb-2 text-[#868E95]"> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
+          <>  <p className="pb-3 p-5 sm:border-2 rounded-lg py-2 sm:px-10 mb-2 text-[#868E95]  "> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p> <hr></hr> </>
+
 
         :
         <div></div>
     }
 
 
-        <h4 className="border-2 rounded-lg py-2 px-10 hover:cursor-pointer mb-2" onClick={()=>{setToggle3(!toggle3)}}> {questions} </h4>
+        <h4 className="sm:border-2 rounded-lg py-2 sm:px-10 px-5 hover:cursor-pointer mb-2" onClick={()=>{setToggle3(!toggle3)}}> {questions} </h4>
+        <hr></hr>
+      
       {
           toggle3 ? 
-          <p className="pb-3 p-5 border-2 rounded-lg py-2 px-10 text-[#868E95]"> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p>
+          <>  <p className="pb-3 p-5 sm:border-2 rounded-lg py-2 sm:px-10 mb-2 text-[#868E95]  "> <span className="text-lg text-[#68BAE3]"> {answerHeading}</span> <br></br> {answers} </p> <hr></hr> </>
+
 
         :
         <div></div>
